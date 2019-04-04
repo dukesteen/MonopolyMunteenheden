@@ -20,6 +20,7 @@ namespace MonopolyMunteenheden
     /// </summary>
     public partial class MainWindow : Window
     {
+        Random random = new Random();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,5 +31,44 @@ namespace MonopolyMunteenheden
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bedragTxtBox.Text = random.Next(2500, 5000).ToString();
+        }
+
+        #region Exit en minimize icon cursor + functionality
+        private void ExitIcon_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void MinimizeIcon_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void ExitIcon_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void ExitIcon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void MinimizeIcon_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void MinimizeIcon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+        #endregion
+
+
     }
 }

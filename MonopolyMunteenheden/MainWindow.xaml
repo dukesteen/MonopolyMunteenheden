@@ -10,14 +10,25 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize">
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Rectangle Fill="#FF00C3FF" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="800" MouseDown="Rectangle_MouseDown"/>
-        <materialDesign:Snackbar></materialDesign:Snackbar>
+        <UserControl>
+            <UserControl.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
+                        <Setter Property="Margin" Value="0 8 0 8" />
+                    </Style>
+                </ResourceDictionary>
+            </UserControl.Resources>
+        </UserControl>
+
+        <Rectangle Fill="#FF00B686" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="800" MouseDown="Rectangle_MouseDown"/>
+        <Rectangle HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="800" Fill="#FF1DE9B6" Margin="0,15,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="800" Fill="#FF1DE9B6" Margin="0,170,0,0"/>
+        <Button Margin="357,175,357,250" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686"></Button>
+        <Button Margin="440,67,274,358" Height="Auto" Content="Random" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="Button_Click"/>
+        <materialDesign:PackIcon x:Name="exitIcon" Kind="Close" Height="15" Width="15" Margin="785,0,0,435" Foreground="#FF39555D" MouseDown="ExitIcon_MouseDown" VerticalAlignment="Bottom" MouseEnter="ExitIcon_MouseEnter" MouseLeave="ExitIcon_MouseLeave"></materialDesign:PackIcon>
+        <materialDesign:PackIcon x:Name="minimizeIcon" Kind="WindowMinimize" Height="15" Width="15" Margin="770,0,0,0" Foreground="#FF39555D" MouseDown="MinimizeIcon_MouseDown" MouseEnter="MinimizeIcon_MouseEnter" MouseLeave="MinimizeIcon_MouseLeave"></materialDesign:PackIcon>
+        <TextBox x:Name="bedragTxtBox" Text="Bedrag" Margin="280,67,368,358"></TextBox>
     </Grid>
 </Window>
