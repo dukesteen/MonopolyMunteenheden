@@ -12,6 +12,9 @@
         Title="MainWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <UserControl>
             <UserControl.Resources>
                 <ResourceDictionary>
@@ -25,10 +28,23 @@
         <Rectangle Fill="#FF00B686" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="800" MouseDown="Rectangle_MouseDown"/>
         <Rectangle HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="800" Fill="#FF1DE9B6" Margin="0,15,0,0"/>
         <Rectangle HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="800" Fill="#FF1DE9B6" Margin="0,170,0,0"/>
-        <Button Margin="357,175,357,250" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686"></Button>
+        <Button Margin="357,175,357,250" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686"/>
         <Button Margin="440,67,274,358" Height="Auto" Content="Random" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="Button_Click"/>
-        <materialDesign:PackIcon x:Name="exitIcon" Kind="Close" Height="15" Width="15" Margin="785,0,0,435" Foreground="#FF39555D" MouseDown="ExitIcon_MouseDown" VerticalAlignment="Bottom" MouseEnter="ExitIcon_MouseEnter" MouseLeave="ExitIcon_MouseLeave"></materialDesign:PackIcon>
-        <materialDesign:PackIcon x:Name="minimizeIcon" Kind="WindowMinimize" Height="15" Width="15" Margin="770,0,0,0" Foreground="#FF39555D" MouseDown="MinimizeIcon_MouseDown" MouseEnter="MinimizeIcon_MouseEnter" MouseLeave="MinimizeIcon_MouseLeave"></materialDesign:PackIcon>
-        <TextBox x:Name="bedragTxtBox" Text="Bedrag" Margin="280,67,368,358"></TextBox>
+        <materialDesign:PackIcon x:Name="exitIcon" Kind="Close" Height="15" Width="15" Margin="785,0,0,435" Foreground="#FF39555D" MouseDown="ExitIcon_MouseDown" VerticalAlignment="Bottom" MouseEnter="ExitIcon_MouseEnter" MouseLeave="ExitIcon_MouseLeave"/>
+        <materialDesign:PackIcon x:Name="minimizeIcon" Kind="WindowMinimize" Height="15" Width="15" Margin="770,0,0,0" Foreground="#FF39555D" MouseDown="MinimizeIcon_MouseDown" MouseEnter="MinimizeIcon_MouseEnter" MouseLeave="MinimizeIcon_MouseLeave"/>
+        <materialDesign:PackIcon Kind="MoneyUsd" Margin="236,62,0,0" Height="37" Width="37" Foreground="#FF39555D"></materialDesign:PackIcon>
+        <TextBox x:Name="bedragTxtBox" Text="Bedrag" Margin="280,67,368,358" Foreground="#FF39555D"/>
+
+        <ScrollViewer x:Name="ImageScrollViewer" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,205,0,0" Height="245">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="D:\Coding\MonopolyMunteenheden\MonopolyMunteenheden\Images\shibainu.jpg" Height="245" Width="186" Stretch="Fill"/>
+                <Image Source="D:\Coding\MonopolyMunteenheden\MonopolyMunteenheden\Images\shibainu.jpg" Height="245" Width="186" Stretch="Fill"/>
+                <Image Source="D:\Coding\MonopolyMunteenheden\MonopolyMunteenheden\Images\shibainu.jpg" Height="245" Width="186" Stretch="Fill"/>
+                <Image Source="D:\Coding\MonopolyMunteenheden\MonopolyMunteenheden\Images\shibainu.jpg" Height="245" Width="186" Stretch="Fill"/>
+                <Image Source="D:\Coding\MonopolyMunteenheden\MonopolyMunteenheden\Images\shibainu.jpg" Height="245" Width="186" Stretch="Fill"/>
+                
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
+
 </Window>
