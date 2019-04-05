@@ -67,8 +67,24 @@ namespace MonopolyMunteenheden
         {
             this.Cursor = Cursors.Arrow;
         }
+
+
         #endregion
 
+        private void BerekenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AddImage("C:\\DukeCoding\\MonopolyMunteenheden\\MonopolyMunteenheden\\Images\\shibainu.jpg");
+            
+        }
 
+        public void AddImage(string path)
+        {
+            Image image = new Image();
+            image.Source = new ImageSourceConverter().ConvertFromString(path) as ImageSource;
+            image.Stretch = Stretch.Fill;
+            image.Height = 245;
+            image.Width = 186;
+            imagePanel.Children.Add(image);
+        }
     }
 }
