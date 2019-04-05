@@ -37,7 +37,7 @@
 
         <ScrollViewer x:Name="ImageScrollViewer" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,205,0,0" Height="245">
             <StackPanel x:Name="imagePanel" Orientation="Horizontal">
-                <Image Source="C:\DukeCoding\MonopolyMunteenheden\MonopolyMunteenheden\Images\shibainu.jpg" Height="245" Width="186" Stretch="Fill"/>
+                
             </StackPanel>
         </ScrollViewer>
     </Grid>

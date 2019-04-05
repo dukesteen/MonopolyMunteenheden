@@ -1,0 +1,35 @@
+{
+  "Ons dorp": {
+    "Dorpsstraat": {
+      "price": 60,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Brink": {
+      "price": 60,
+      "path": "path",
+      "buyable": false
+    }
+  },
+  
+  "Arnhem": {
+    "Steenstraat": {
+      "price": 100,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Ketelstraat": {
+      "price": 100,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Velperplein": {
+      "price": 120,
+      "path": "path",
+      "buyable": false
+    }
+  }
+}

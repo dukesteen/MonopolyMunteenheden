@@ -74,9 +74,9 @@ namespace MonopolyMunteenheden
         private void BerekenBtn_Click(object sender, RoutedEventArgs e)
         {
             AddImage("C:\\DukeCoding\\MonopolyMunteenheden\\MonopolyMunteenheden\\Images\\shibainu.jpg");
-            
         }
 
+        // Functie om een foto aan de stackpanel toe te voegen met een bepaalde path.
         public void AddImage(string path)
         {
             Image image = new Image();
