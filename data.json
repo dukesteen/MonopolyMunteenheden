@@ -31,5 +31,159 @@
       "path": "path",
       "buyable": false
     }
+  },
+
+  "Haarlem": {
+      "Barteljorisstraat": {
+        "price": 140,
+        "path": "path",
+        "buyable": false
+      },
+      
+      "Zijlweg": {
+        "price": 140,
+        "path": "path",
+        "buyable": false
+      },
+      
+      "Houtstraat": {
+        "price": 160,
+        "path": "path",
+        "buyable": false 
+      }
+  },
+
+  "Utrecht": {
+    "Neude": {
+      "price": 180,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Biltstraat": {
+      "price": 180,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Vreeburg": {
+      "price": 200,
+      "path": "path",
+      "buyable": false 
+    }
+  },
+
+  "Groningen": {
+    "Akerkhof": {
+      "price": 220,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Grotemarkt": {
+      "price": 220,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Heerestraat": {
+      "price": 240,
+      "path": "path",
+      "buyable": false 
+    }
+  },
+
+  "Den_haag": {
+    "Spui": {
+      "price": 260,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Plein": {
+      "price": 260,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Lange_poten": {
+      "price": 280,
+      "path": "path",
+      "buyable": false 
+    }
+  },
+
+  "Rotterdam": {
+    "Hofplein": {
+      "price": 300,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Blaak": {
+      "price": 300,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Coolsingel": {
+      "price": 320,
+      "path": "path",
+      "buyable": false
+    }
+  },
+
+  "Amsterdam": {
+    "Leidsestraat": {
+      "price": 350,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Kalverstraat": {
+      "price": 400,
+      "path": "path",
+      "buyable": false
+    }
+  },
+
+  "Stations": {
+    "Station_noord": {
+      "price": 200,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Station_oost": {
+      "price": 200,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Station_zuid": {
+      "price": 200,
+      "path": "path",
+      "buyable": false 
+    },
+
+    "Station_west": {
+      "price": 200,
+      "path": "path",
+      "buyable": false 
+    }
+  },
+
+  "Overig": {
+    "Waterleiding": {
+      "price": 300,
+      "path": "path",
+      "buyable": false
+    },
+    
+    "Elektriciteitsbedrijf": {
+      "price": 300,
+      "path": "path",
+      "buyable": false
+    }
   }
 }
