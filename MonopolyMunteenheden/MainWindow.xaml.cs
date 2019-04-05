@@ -73,7 +73,7 @@ namespace MonopolyMunteenheden
 
         private void BerekenBtn_Click(object sender, RoutedEventArgs e)
         {
-            AddImage("C:\\DukeCoding\\MonopolyMunteenheden\\MonopolyMunteenheden\\Images\\shibainu.jpg");
+            AddImage(AppDomain.CurrentDomain.BaseDirectory + "\\MonopolyCards\\Amsterdam\\Kalverstraat.png");
         }
 
         // Functie om een foto aan de stackpanel toe te voegen met een bepaalde path.
@@ -83,8 +83,13 @@ namespace MonopolyMunteenheden
             image.Source = new ImageSourceConverter().ConvertFromString(path) as ImageSource;
             image.Stretch = Stretch.Fill;
             image.Height = 245;
-            image.Width = 186;
+            image.Width = 160;
             imagePanel.Children.Add(image);
+        }
+
+        private void BerekenBtn_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            AddImage(AppDomain.CurrentDomain.BaseDirectory + "\\MonopolyCards\\Amsterdam\\Leidsestraat.png");
         }
     }
 }
