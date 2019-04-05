@@ -76,6 +76,7 @@ namespace MonopolyMunteenheden
             AddImage(AppDomain.CurrentDomain.BaseDirectory + "\\MonopolyCards\\Amsterdam\\Kalverstraat.png");
         }
 
+        #region Afbeelding toevoegen en text toevoegen functies
         // Functie om een foto aan de stackpanel toe te voegen met een bepaalde path.
         public void AddImage(string path)
         {
@@ -87,9 +88,22 @@ namespace MonopolyMunteenheden
             imagePanel.Children.Add(image);
         }
 
+        public void AddToTextBlock(string text)
+        {
+            TextBlock textBlock = new TextBlock();
+            textBlock.Text = text;
+            textPanel.Children.Add(textBlock);
+        }
+        #endregion
+
         private void BerekenBtn_Copy_Click(object sender, RoutedEventArgs e)
         {
             AddImage(AppDomain.CurrentDomain.BaseDirectory + "\\MonopolyCards\\Amsterdam\\Leidsestraat.png");
+        }
+
+        private void AddText_Click(object sender, RoutedEventArgs e)
+        {
+            AddToTextBlock("sup");
         }
     }
 }

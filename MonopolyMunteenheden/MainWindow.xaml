@@ -46,10 +46,15 @@
                 </ScrollViewer>
             </TabItem>
             <TabItem Header="TEKST">
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Material Design</TextBlock>
+                <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,20,0,20">
+                    <StackPanel x:Name="textPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Hey"/>
+                    </StackPanel>
+                </ScrollViewer>
             </TabItem>
         </dragablz:TabablzControl>
         <Button x:Name="berekenBtn" Margin="349,182,365,272" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="BerekenBtn_Click"/>
+        <Button x:Name="addText" Margin="349,123,365,331" Height="Auto" Content="AddText" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="AddText_Click"/>
     </Grid>
 
 </Window>
