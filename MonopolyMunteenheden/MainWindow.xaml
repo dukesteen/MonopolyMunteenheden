@@ -38,14 +38,20 @@
             <dragablz:TabablzControl.InterTabController>
                 <dragablz:InterTabController />
             </dragablz:TabablzControl.InterTabController>
-            <TabItem Header="FOTO'S">
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="FOTO'S" Foreground="#FF39555D" />
+                </TabItem.Header>
                 <ScrollViewer x:Name="ImageScrollViewer" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <StackPanel x:Name="imagePanel" Orientation="Horizontal">
 
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="TEKST">
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="TEKST" Foreground="#FF39555D" />
+                </TabItem.Header>
                 <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,20,0,20">
                     <StackPanel x:Name="textPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Hey"/>

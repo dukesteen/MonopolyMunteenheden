@@ -80,26 +80,27 @@ namespace MonopolyMunteenheden
         // Functie om een foto aan de stackpanel toe te voegen met een bepaalde path.
         public void AddImage(string path)
         {
-            Image image = new Image();
-            image.Source = new ImageSourceConverter().ConvertFromString(path) as ImageSource;
-            image.Stretch = Stretch.Fill;
-            image.Height = 245;
-            image.Width = 160;
+            Image image = new Image
+            {
+                Source = new ImageSourceConverter().ConvertFromString(path) as ImageSource,
+                Stretch = Stretch.Fill,
+                Height = 245,
+                Width = 160
+            };
+
             imagePanel.Children.Add(image);
         }
 
         public void AddToTextBlock(string text)
         {
-            TextBlock textBlock = new TextBlock();
-            textBlock.Text = text;
+            TextBlock textBlock = new TextBlock
+            {
+                Text = text
+            };
+
             textPanel.Children.Add(textBlock);
         }
         #endregion
-
-        private void BerekenBtn_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            AddImage(AppDomain.CurrentDomain.BaseDirectory + "\\MonopolyCards\\Amsterdam\\Leidsestraat.png");
-        }
 
         private void AddText_Click(object sender, RoutedEventArgs e)
         {
