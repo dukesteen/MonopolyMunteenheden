@@ -1,0 +1,227 @@
+{
+    "streets": [
+        {
+            "name": "Dorpsstraat",
+            "cityName": "Ons_dorp",
+            "price": 60,
+            "path": "\\MonopolyCards\\Ons_dorp\\Dorpsstraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Brink",
+            "cityName": "Ons_dorp",
+            "price": 60,
+            "path": "\\MonopolyCards\\Ons_dorp\\Brink.png",
+            "bought": false
+          },
+
+          {
+            "name": "Steenstraat",
+            "cityName": "Arnhem",
+            "price": 100,
+            "path": "\\MonopolyCards\\Arnhem\\Steenstraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Ketelstraat",
+            "cityName": "Arnhem",
+            "price": 100,
+            "path": "\\MonopolyCards\\Arnhem\\Ketelstraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Velperplein",
+            "cityName": "Arnhem",
+            "price": 120,
+            "path": "\\MonopolyCards\\Arnhem\\Velperplein.png",
+            "bought": false
+          },
+
+          {
+            "name": "Barteljorisstraat",
+            "cityName": "Haarlem",
+            "price": 140,
+            "path": "\\MonopolyCards\\Haarlem\\Barteljorisstraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Zijlweg",
+            "cityName": "Haarlem",
+            "price": 140,
+            "path": "\\MonopolyCards\\Haarlem\\Zijlweg.png",
+            "bought": false
+          },
+
+          {
+            "name": "Houtstraat",
+            "cityName": "Haarlem",
+            "price": 160,
+            "path": "\\MonopolyCards\\Haarlem\\Houtstraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Neude",
+            "cityName": "Utrecht",
+            "price": 180,
+            "path": "\\MonopolyCards\\Utrecht\\Neude.png",
+            "bought": false
+          },
+
+          {
+            "name": "Biltstraat",
+            "cityName": "Utrecht",
+            "price": 180,
+            "path": "\\MonopolyCards\\Utrecht\\Biltstraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Vreeburg",
+            "cityName": "Utrecht",
+            "price": 200,
+            "path": "\\MonopolyCards\\Utrecht\\Vreeburg.png",
+            "bought": false
+          },
+
+          {
+            "name": "Akerkhof",
+            "cityName": "Groningen",
+            "price": 220,
+            "path": "\\MonopolyCards\\Groningen\\Akerkhof.png",
+            "bought": false
+          },
+
+          {
+            "name": "Grotemarkt",
+            "cityName": "Groningen",
+            "price": 220,
+            "path": "\\MonopolyCards\\Groningen\\Grotemarkt.png",
+            "bought": false
+          },
+
+          {
+            "name": "Heerestraat",
+            "cityName": "Groningen",
+            "price": 240,
+            "path": "\\MonopolyCards\\Groningen\\Heerestraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Spui",
+            "cityName": "Den_haag",
+            "price": 260,
+            "path": "\\MonopolyCards\\Den_haag\\Spui.png",
+            "bought": false
+          },
+
+          {
+            "name": "Plein",
+            "cityName": "Den_haag",
+            "price": 260,
+            "path": "\\MonopolyCards\\Den_haag\\Plein.png",
+            "bought": false
+          },
+
+          {
+            "name": "Lange_poten",
+            "cityName": "Den_haag",
+            "price": 260,
+            "path": "\\MonopolyCards\\Den_haag\\Lange_poten.png",
+            "bought": false
+          },
+
+          {
+            "name": "Hofplein",
+            "cityName": "Rotterdam",
+            "price": 300,
+            "path": "\\MonopolyCards\\Rotterdam\\Hofplein.png",
+            "bought": false
+          },
+
+          {
+            "name": "Blaak",
+            "cityName": "Rotterdam",
+            "price": 300,
+            "path": "\\MonopolyCards\\Rotterdam\\Blaak.png",
+            "bought": false
+          },
+
+          {
+            "name": "Coolsingel",
+            "cityName": "Rotterdam",
+            "price": 320,
+            "path": "\\MonopolyCards\\Rotterdam\\Coolsingel.png",
+            "bought": false
+          },
+
+          {
+            "name": "Leidsestraat",
+            "cityName": "Amsterdam",
+            "price": 350,
+            "path": "\\MonopolyCards\\Amsterdam\\Leidsestraat.png",
+            "bought": false
+          },
+
+          {
+            "name": "Kalverstraat",
+            "cityName": "Amsterdam",
+            "price": 400,
+            "path": "\\MonopolyCards\\Amsterdam\\Kalverstraat.png",
+            "bought": false
+          },
+          
+          {
+            "name": "Station_noord",
+            "cityName": "Stations",
+            "price": 200,
+            "path": "\\MonopolyCards\\Stations\\Station_noord.png",
+            "bought": false
+          },
+
+          {
+            "name": "Station_oost",
+            "cityName": "Stations",
+            "price": 200,
+            "path": "\\MonopolyCards\\Stations\\Station_oost.png",
+            "bought": false
+          },
+
+          {
+            "name": "Station_zuid",
+            "cityName": "Stations",
+            "price": 200,
+            "path": "\\MonopolyCards\\Stations\\Station_zuid.png",
+            "bought": false
+          },
+
+          {
+            "name": "Station_west",
+            "cityName": "Stations",
+            "price": 200,
+            "path": "\\MonopolyCards\\Stations\\Station_west.png",
+            "bought": false
+          },
+
+          {
+            "name": "Waterleiding",
+            "cityName": "Overig",
+            "price": 300,
+            "path": "\\MonopolyCards\\Overig\\Waterleiding.png",
+            "bought": false
+          },
+
+          {
+            "name": "Elektriciteitsbedrijf",
+            "cityName": "Overig",
+            "price": 300,
+            "path": "\\MonopolyCards\\Overig\\Elektriciteitsbedrijf.png",
+            "bought": false
+          }
+    ]
+}
