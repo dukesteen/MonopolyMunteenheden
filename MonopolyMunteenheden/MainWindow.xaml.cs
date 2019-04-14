@@ -29,38 +29,49 @@ namespace MonopolyMunteenheden
 
         public readonly Random random = new Random();
 
+        // jsonString draagt alle data voor de straten (Prijs, stadsnaam, straatnaam en foto path)
         static string jsonString = "{ \"streets\": [ { \"name\": \"Dorpsstraat\", \"cityName\": \"Ons_dorp\", \"price\": 60, \"path\": \"/MonopolyCards/Ons_dorp/Dorpsstraat.png\"}, { \"name\": \"Brink\", \"cityName\": \"Ons_dorp\", \"price\": 60, \"path\": \"/MonopolyCards/Ons_dorp/Brink.png\"}, { \"name\": \"Steenstraat\", \"cityName\": \"Arnhem\", \"price\": 100, \"path\": \"/MonopolyCards/Arnhem/Steenstraat.png\"}, { \"name\": \"Ketelstraat\", \"cityName\": \"Arnhem\", \"price\": 100, \"path\": \"/MonopolyCards/Arnhem/Ketelstraat.png\"}, { \"name\": \"Velperplein\", \"cityName\": \"Arnhem\", \"price\": 120, \"path\": \"/MonopolyCards/Arnhem/Velperplein.png\"}, { \"name\": \"Barteljorisstraat\", \"cityName\": \"Haarlem\", \"price\": 140, \"path\": \"/MonopolyCards/Haarlem/Barteljorisstraat.png\"}, { \"name\": \"Zijlweg\", \"cityName\": \"Haarlem\", \"price\": 140, \"path\": \"/MonopolyCards/Haarlem/Zijlweg.png\"}, { \"name\": \"Houtstraat\", \"cityName\": \"Haarlem\", \"price\": 160, \"path\": \"/MonopolyCards/Haarlem/Houtstraat.png\"}, { \"name\": \"Neude\", \"cityName\": \"Utrecht\", \"price\": 180, \"path\": \"/MonopolyCards/Utrecht/Neude.png\"}, { \"name\": \"Biltstraat\", \"cityName\": \"Utrecht\", \"price\": 180, \"path\": \"/MonopolyCards/Utrecht/Biltstraat.png\"}, { \"name\": \"Vreeburg\", \"cityName\": \"Utrecht\", \"price\": 200, \"path\": \"/MonopolyCards/Utrecht/Vreeburg.png\"}, { \"name\": \"Akerkhof\", \"cityName\": \"Groningen\", \"price\": 220, \"path\": \"/MonopolyCards/Groningen/Akerkhof.png\"}, { \"name\": \"Grotemarkt\", \"cityName\": \"Groningen\", \"price\": 220, \"path\": \"/MonopolyCards/Groningen/Grotemarkt.png\"}, { \"name\": \"Heerestraat\", \"cityName\": \"Groningen\", \"price\": 240, \"path\": \"/MonopolyCards/Groningen/Heerestraat.png\"}, { \"name\": \"Spui\", \"cityName\": \"Den_haag\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Spui.png\"}, { \"name\": \"Plein\", \"cityName\": \"Den_haag\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Plein.png\"}, { \"name\": \"Lange_poten\", \"cityName\": \"Den_haag\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Lange_poten.png\"}, { \"name\": \"Hofplein\", \"cityName\": \"Rotterdam\", \"price\": 300, \"path\": \"/MonopolyCards/Rotterdam/Hofplein.png\"}, { \"name\": \"Blaak\", \"cityName\": \"Rotterdam\", \"price\": 300, \"path\": \"/MonopolyCards/Rotterdam/Blaak.png\"}, { \"name\": \"Coolsingel\", \"cityName\": \"Rotterdam\", \"price\": 320, \"path\": \"/MonopolyCards/Rotterdam/Coolsingel.png\"}, { \"name\": \"Leidsestraat\", \"cityName\": \"Amsterdam\", \"price\": 350, \"path\": \"/MonopolyCards/Amsterdam/Leidsestraat.png\"}, { \"name\": \"Kalverstraat\", \"cityName\": \"Amsterdam\", \"price\": 400, \"path\": \"/MonopolyCards/Amsterdam/Kalverstraat.png\"}, { \"name\": \"Station_noord\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_noord.png\"}, { \"name\": \"Station_oost\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_oost.png\"}, { \"name\": \"Station_zuid\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_zuid.png\"}, { \"name\": \"Station_west\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_west.png\"}, { \"name\": \"Waterleiding\", \"cityName\": \"Overig\", \"price\": 300, \"path\": \"/MonopolyCards/Overig/Waterleiding.png\"}, { \"name\": \"Elektriciteitsbedrijf\", \"cityName\": \"Overig\", \"price\": 300, \"path\": \"/MonopolyCards/Overig/Elektriciteitsbedrijf.png\"} ] }";
+        // Hier word de JSON data in de StreetData class gestopt
         private readonly StreetData data = JsonConvert.DeserializeObject<StreetData>(jsonString);
 
         public MainWindow()
         {
             InitializeComponent();
             volgordeBox.SelectedIndex = 0;
+            mainWindow.Icon = new ImageSourceConverter().ConvertFromString(AppDomain.CurrentDomain.BaseDirectory + "/MonopolyCards/Monopoly.png") as ImageSource;
         }
 
+        // Functionaliteit voor het verplaatsen van de MainWindow
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
 
+        // Dit stopt een random getal in de bedragTxtBox
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // bedragTxtBox = een random getal tussen 2500 en 5000
             bedragTxtBox.Text = random.Next(2500, 5000).ToString();
         }
 
+        // Functionaliteit van het programma, deze code word uitgevoerd als "Berekenen" word aangeklikt
         private void BerekenBtn_Click(object sender, RoutedEventArgs e)
         {
-            Int32.TryParse(bedragTxtBox.Text, out bedrag);
+            int.TryParse(bedragTxtBox.Text, out bedrag);
 
+            // Als hoogNaarLaag == true, sorteer dan van hoog naar laag
             if (hoogNaarLaag == true)
             {
                 // Voeg alle data toe aan een collection
-                var naam = from s in data.Streets
+                var informatie = from s in data.Streets
+                    // Order het van hoog naar laag
                     orderby s.Price descending
+                    // Stop het allemaal in een groep
                     group s by s;
 
-                foreach (var i in naam)
+                // Voor elke record in naam, doe dit
+                foreach (var i in informatie)
                 {
                     if (bedrag <= i.FirstOrDefault().Price) continue;
 
@@ -75,14 +86,18 @@ namespace MonopolyMunteenheden
                 // Voeg het overgebleven bedrag toe aan het tekst blok
                 AddToTextBlock("Remaining amount: " + bedrag);
             }
+
+            // Anders, sorteer van laag naar hoog. Dit is praktisch dezelfde code, alleen is descending nu ascending
             else
             {
                 // Voeg alle data toe aan een collection
-                var naam = from s in data.Streets
+                var informatie = from s in data.Streets
+                    // Order het van laag naar hoog
                     orderby s.Price ascending
+                    // Stop het allemaal in een groep
                     group s by s;
 
-                foreach (var i in naam)
+                foreach (var i in informatie)
                 {
                     if (bedrag <= i.FirstOrDefault().Price) continue;
 
@@ -138,7 +153,7 @@ namespace MonopolyMunteenheden
         /// <summary>
         /// Functie om een foto aan de stackpanel toe te voegen met een bepaalde path.
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="path">De locatie van de afbeelding</param>
         public void AddImage(string path)
         {
             Image image = new Image
@@ -152,6 +167,10 @@ namespace MonopolyMunteenheden
             imagePanel.Children.Add(image);
         }
 
+        /// <summary>
+        /// Functie om een stuk tekst toe te voegen aan het textPanel
+        /// </summary>
+        /// <param name="text">De tekst die word toegevoegt</param>
         public void AddToTextBlock(string text)
         {
             TextBlock textBlock = new TextBlock
@@ -165,32 +184,40 @@ namespace MonopolyMunteenheden
 
         public partial class StreetData
         {
+            // Een tabel met straten
             [JsonProperty("streets")]
             public Street[] Streets { get; set; }
         }
 
+        // Iedere straat heeft al deze informatie (per straat)
         public partial class Street
         {
+            // Naam van de straat
             [JsonProperty("name")]
             public string Name { get; set; }
 
+            // Naam van de stad
             [JsonProperty("cityName")]
             public string CityName { get; set; }
 
+            // Prijs van de straat
             [JsonProperty("price")]
             public long Price { get; set; }
 
+            // Locatie van de foto van de straat
             [JsonProperty("path")]
             public string Path { get; set; }
         }
 
         private void VolgordeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // Als in volgordeBox het geselecteerde item hoogNaarLaagItm is, zet hoogNaarLaag true en laagNaarHoog false
             if (volgordeBox.SelectedItem == hoogNaarLaagItm)
             {
                 hoogNaarLaag = true;
                 laagNaarHoog = false;
             }
+            // Als in volgordeBox het geselecteerde item laagNaarHoogItm is, zet hoogNaarLaag false en laagNaarHoog true
             else
             {
                 hoogNaarLaag = false;
@@ -200,7 +227,9 @@ namespace MonopolyMunteenheden
 
         private void ResetBtn_Click(object sender, RoutedEventArgs e)
         {
+            // Haal alle tekst uit de textPanel
             textPanel.Children.Clear();
+            // Haal alle fotos uit de imagePanel
             imagePanel.Children.Clear();
         }
     }
