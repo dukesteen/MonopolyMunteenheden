@@ -14,7 +14,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="800"/>
         </Grid.ColumnDefinitions>
         <UserControl>
             <UserControl.Resources>
@@ -32,7 +32,7 @@
         <materialDesign:PackIcon x:Name="exitIcon" Kind="Close" Height="15" Width="15" Margin="785,0,0,461" Foreground="#FF39555D" MouseDown="ExitIcon_MouseDown" VerticalAlignment="Bottom" MouseEnter="ExitIcon_MouseEnter" MouseLeave="ExitIcon_MouseLeave"/>
         <materialDesign:PackIcon x:Name="minimizeIcon" Kind="WindowMinimize" Height="15" Width="15" Margin="770,0,0,0" Foreground="#FF39555D" MouseDown="MinimizeIcon_MouseDown" MouseEnter="MinimizeIcon_MouseEnter" MouseLeave="MinimizeIcon_MouseLeave"/>
         <materialDesign:PackIcon Kind="MoneyUsd" Margin="250,67,0,0" Height="37" Width="37" Foreground="#FF39555D"></materialDesign:PackIcon>
-        <TextBox x:Name="bedragTxtBox" Text="Bedrag" Margin="294,67,354,377" Foreground="#FF39555D"/>
+        <TextBox x:Name="bedragTxtBox" Text="Bedrag" Margin="294,67,354,377" Foreground="#FF39555D" TextChanged="BedragTxtBox_TextChanged"/>
 
         <dragablz:TabablzControl Margin="0,172,0,0" BorderBrush="#FF1DE9B6">
             <dragablz:TabablzControl.InterTabController>
@@ -54,7 +54,7 @@
                 </TabItem.Header>
                 <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <StackPanel x:Name="textPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Hey"/>
+                        
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>

@@ -23,10 +23,11 @@ namespace MonopolyMunteenheden
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int bedrag = 0;
         Random random = new Random();
 
-        static string jsonString = "{ \"cities\": [ { \"name\": \"Ons_dorp\", \"streets\": [ { \"name\": \"Dorpsstraat\", \"price\": 60, \"path\": \"/MonopolyCards/Ons_dorp/Dorpsstraat.png\", \"bought\": false }, { \"name\": \"Brink\", \"price\": 60, \"path\": \"/MonopolyCards/Ons_dorp/Brink.png\", \"bought\": false } ] }, { \"name\": \"Arnhem\", \"streets\": [ { \"name\": \"Steenstraat\", \"price\": 100, \"path\": \"/MonopolyCards/Arnhem/Steenstraat.png\", \"bought\": false }, { \"name\": \"Ketelstraat\", \"price\": 100, \"path\": \"/MonopolyCards/Arnhem/Ketelstraat.png\", \"bought\": false }, { \"name\": \"Velperplein\", \"price\": 120, \"path\": \"/MonopolyCards/Arnhem/Velperplein.png\", \"bought\": false } ] }, { \"name\": \"Haarlem\", \"streets\":[ { \"name\": \"Barteljorisstraat\", \"price\": 140, \"path\": \"/MonopolyCards/Haarlem/Barteljorisstraat.png\", \"bought\": false }, { \"name\": \"Zijlweg\", \"price\": 140, \"path\": \"/MonopolyCards/Haarlem/Zijlweg.png\", \"bought\": false }, { \"name\": \"Houtstraat\", \"price\": 160, \"path\": \"/MonopolyCards/Haarlem/Houtstraat.png\", \"bought\": false } ] }, { \"name\": \"Utrecht\", \"streets\": [ { \"name\": \"Neude\", \"price\": 180, \"path\": \"/MonopolyCards/Utrecht/Neude.png\", \"bought\": false }, { \"name\": \"Biltstraat\", \"price\": 180, \"path\": \"/MonopolyCards/Utrecht/Biltstraat.png\", \"bought\": false }, { \"name\": \"Vreeburg\", \"price\": 200, \"path\": \"/MonopolyCards/Utrecht/Vreeburg.png\", \"bought\": false } ] }, { \"name\": \"Groningen\", \"streets\":[ { \"name\": \"Akerkhof\", \"price\": 220, \"path\": \"/MonopolyCards/Groningen/Akerkhof.png\", \"bought\": false }, { \"name\": \"Grotemarkt\", \"price\": 220, \"path\": \"/MonopolyCards/Groningen/Grotemarkt.png\", \"bought\": false }, { \"name\": \"Heerestraat\", \"price\": 240, \"path\": \"/MonopolyCards/Groningen/Heerestraat.png\", \"bought\": false } ] }, { \"name\": \"Den_haag\", \"streets\": [ { \"name\": \"Spui\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Spui.png\", \"bought\": false }, { \"name\": \"Plein\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Plein.png\", \"bought\": false }, { \"name\": \"Lange_poten\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Lange_poten.png\", \"bought\": false } ] }, { \"name\": \"Rotterdam\", \"streets\": [ { \"name\": \"Hofplein\", \"price\": 300, \"path\": \"/MonopolyCards/Rotterdam/Hofplein.png\", \"bought\": false }, { \"name\": \"Blaak\", \"price\": 300, \"path\": \"/MonopolyCards/Rotterdam/Blaak.png\", \"bought\": false }, { \"name\": \"Coolsingel\", \"price\": 320, \"path\": \"/MonopolyCards/Rotterdam/Coolsingel.png\", \"bought\": false } ] }, { \"name\": \"Amsterdam\", \"streets\": [ { \"name\": \"Leidsestraat\", \"price\": 350, \"path\": \"/MonopolyCards/Amsterdam/Leidsestraat.png\", \"bought\": false }, { \"name\": \"Kalverstraat\", \"price\": 400, \"path\": \"/MonopolyCards/Amsterdam/Kalverstraat.png\", \"bought\": false } ] }, { \"name\": \"Stations\", \"streets\": [ { \"name\": \"Station_noord\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_noord.png\", \"bought\": false }, { \"name\": \"Station_oost\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_oost.png\", \"bought\": false }, { \"name\": \"Station_zuid\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_zuid.png\", \"bought\": false }, { \"name\": \"Station_west\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_west.png\", \"bought\": false } ] }, { \"name\": \"Overig\", \"streets\": [ { \"name\": \"Waterleiding\", \"price\": 300, \"path\": \"/MonopolyCards/Overig/Waterleiding.png\", \"bought\": false }, { \"name\": \"Elektriciteitsbedrijf\", \"price\": 300, \"path\": \"/MonopolyCards/Overig/Elektriciteitsbedrijf.png\", \"bought\": false } ] } ] }";
-        MonopolyStreetData data = JsonConvert.DeserializeObject<MonopolyStreetData>(jsonString);
+        static string jsonString = "{ \"streets\": [ { \"name\": \"Dorpsstraat\", \"cityName\": \"Ons_dorp\", \"price\": 60, \"path\": \"/MonopolyCards/Ons_dorp/Dorpsstraat.png\", \"bought\": false }, { \"name\": \"Brink\", \"cityName\": \"Ons_dorp\", \"price\": 60, \"path\": \"/MonopolyCards/Ons_dorp/Brink.png\", \"bought\": false }, { \"name\": \"Steenstraat\", \"cityName\": \"Arnhem\", \"price\": 100, \"path\": \"/MonopolyCards/Arnhem/Steenstraat.png\", \"bought\": false }, { \"name\": \"Ketelstraat\", \"cityName\": \"Arnhem\", \"price\": 100, \"path\": \"/MonopolyCards/Arnhem/Ketelstraat.png\", \"bought\": false }, { \"name\": \"Velperplein\", \"cityName\": \"Arnhem\", \"price\": 120, \"path\": \"/MonopolyCards/Arnhem/Velperplein.png\", \"bought\": false }, { \"name\": \"Barteljorisstraat\", \"cityName\": \"Haarlem\", \"price\": 140, \"path\": \"/MonopolyCards/Haarlem/Barteljorisstraat.png\", \"bought\": false }, { \"name\": \"Zijlweg\", \"cityName\": \"Haarlem\", \"price\": 140, \"path\": \"/MonopolyCards/Haarlem/Zijlweg.png\", \"bought\": false }, { \"name\": \"Houtstraat\", \"cityName\": \"Haarlem\", \"price\": 160, \"path\": \"/MonopolyCards/Haarlem/Houtstraat.png\", \"bought\": false }, { \"name\": \"Neude\", \"cityName\": \"Utrecht\", \"price\": 180, \"path\": \"/MonopolyCards/Utrecht/Neude.png\", \"bought\": false }, { \"name\": \"Biltstraat\", \"cityName\": \"Utrecht\", \"price\": 180, \"path\": \"/MonopolyCards/Utrecht/Biltstraat.png\", \"bought\": false }, { \"name\": \"Vreeburg\", \"cityName\": \"Utrecht\", \"price\": 200, \"path\": \"/MonopolyCards/Utrecht/Vreeburg.png\", \"bought\": false }, { \"name\": \"Akerkhof\", \"cityName\": \"Groningen\", \"price\": 220, \"path\": \"/MonopolyCards/Groningen/Akerkhof.png\", \"bought\": false }, { \"name\": \"Grotemarkt\", \"cityName\": \"Groningen\", \"price\": 220, \"path\": \"/MonopolyCards/Groningen/Grotemarkt.png\", \"bought\": false }, { \"name\": \"Heerestraat\", \"cityName\": \"Groningen\", \"price\": 240, \"path\": \"/MonopolyCards/Groningen/Heerestraat.png\", \"bought\": false }, { \"name\": \"Spui\", \"cityName\": \"Den_haag\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Spui.png\", \"bought\": false }, { \"name\": \"Plein\", \"cityName\": \"Den_haag\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Plein.png\", \"bought\": false }, { \"name\": \"Lange_poten\", \"cityName\": \"Den_haag\", \"price\": 260, \"path\": \"/MonopolyCards/Den_haag/Lange_poten.png\", \"bought\": false }, { \"name\": \"Hofplein\", \"cityName\": \"Rotterdam\", \"price\": 300, \"path\": \"/MonopolyCards/Rotterdam/Hofplein.png\", \"bought\": false }, { \"name\": \"Blaak\", \"cityName\": \"Rotterdam\", \"price\": 300, \"path\": \"/MonopolyCards/Rotterdam/Blaak.png\", \"bought\": false }, { \"name\": \"Coolsingel\", \"cityName\": \"Rotterdam\", \"price\": 320, \"path\": \"/MonopolyCards/Rotterdam/Coolsingel.png\", \"bought\": false }, { \"name\": \"Leidsestraat\", \"cityName\": \"Amsterdam\", \"price\": 350, \"path\": \"/MonopolyCards/Amsterdam/Leidsestraat.png\", \"bought\": false }, { \"name\": \"Kalverstraat\", \"cityName\": \"Amsterdam\", \"price\": 400, \"path\": \"/MonopolyCards/Amsterdam/Kalverstraat.png\", \"bought\": false }, { \"name\": \"Station_noord\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_noord.png\", \"bought\": false }, { \"name\": \"Station_oost\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_oost.png\", \"bought\": false }, { \"name\": \"Station_zuid\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_zuid.png\", \"bought\": false }, { \"name\": \"Station_west\", \"cityName\": \"Stations\", \"price\": 200, \"path\": \"/MonopolyCards/Stations/Station_west.png\", \"bought\": false }, { \"name\": \"Waterleiding\", \"cityName\": \"Overig\", \"price\": 300, \"path\": \"/MonopolyCards/Overig/Waterleiding.png\", \"bought\": false }, { \"name\": \"Elektriciteitsbedrijf\", \"cityName\": \"Overig\", \"price\": 300, \"path\": \"/MonopolyCards/Overig/Elektriciteitsbedrijf.png\", \"bought\": false } ] }";
+        StreetData data = JsonConvert.DeserializeObject<StreetData>(jsonString);
 
         public MainWindow()
         {
@@ -80,7 +81,10 @@ namespace MonopolyMunteenheden
 
         private void BerekenBtn_Click(object sender, RoutedEventArgs e)
         {
-            AddImage(AppDomain.CurrentDomain.BaseDirectory + "/MonopolyCards/Amsterdam/Kalverstraat.png");
+            foreach (var i in data.Streets)
+            {
+                AddImage(AppDomain.CurrentDomain.BaseDirectory + i.Path);
+            }
         }
 
         #region Afbeelding toevoegen en text toevoegen functies
@@ -115,27 +119,25 @@ namespace MonopolyMunteenheden
 
         private void AddText_Click(object sender, RoutedEventArgs e)
         {
-            int highest = 0;
-            foreach (var element in data.Cities)
+            // Selecteer de prijs van Dorpsstraat
+            var naam = from s in data.Streets
+                       where s.Bought == false
+                       orderby s.Price descending 
+                       group s by s;
+
+            foreach (var i in naam)
             {
-                if (element > highest)
-                {
-                    highest = element;
-                }
+                if (bedrag <= i.FirstOrDefault().Price) continue;
+                AddToTextBlock(i.FirstOrDefault().Name + ": Bought");
+                AddImage(AppDomain.CurrentDomain.BaseDirectory + i.FirstOrDefault().Path);
+                bedrag -= Convert.ToInt32(i.FirstOrDefault().Price);
             }
+
+            AddToTextBlock("Remaining amount: " + bedrag);
         }
 
-        public partial class MonopolyStreetData
+        public partial class StreetData
         {
-            [JsonProperty("cities")]
-            public City[] Cities { get; set; }
-        }
-
-        public partial class City
-        {
-            [JsonProperty("name")]
-            public string Name { get; set; }
-
             [JsonProperty("streets")]
             public Street[] Streets { get; set; }
         }
@@ -145,6 +147,9 @@ namespace MonopolyMunteenheden
             [JsonProperty("name")]
             public string Name { get; set; }
 
+            [JsonProperty("cityName")]
+            public string CityName { get; set; }
+
             [JsonProperty("price")]
             public long Price { get; set; }
 
@@ -153,6 +158,11 @@ namespace MonopolyMunteenheden
 
             [JsonProperty("bought")]
             public bool Bought { get; set; }
+        }
+
+        private void BedragTxtBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            bool success = Int32.TryParse(bedragTxtBox.Text, out bedrag);
         }
     }
 }
