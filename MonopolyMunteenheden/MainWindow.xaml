@@ -19,6 +19,9 @@
         <UserControl>
             <UserControl.Resources>
                 <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
+                    </ResourceDictionary.MergedDictionaries>
                     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
                         <Setter Property="Margin" Value="0 8 0 8" />
                     </Style>
@@ -32,7 +35,7 @@
         <materialDesign:PackIcon x:Name="exitIcon" Kind="Close" Height="15" Width="15" Margin="785,0,0,461" Foreground="#FF39555D" MouseDown="ExitIcon_MouseDown" VerticalAlignment="Bottom" MouseEnter="ExitIcon_MouseEnter" MouseLeave="ExitIcon_MouseLeave"/>
         <materialDesign:PackIcon x:Name="minimizeIcon" Kind="WindowMinimize" Height="15" Width="15" Margin="770,0,0,0" Foreground="#FF39555D" MouseDown="MinimizeIcon_MouseDown" MouseEnter="MinimizeIcon_MouseEnter" MouseLeave="MinimizeIcon_MouseLeave"/>
         <materialDesign:PackIcon Kind="MoneyUsd" Margin="250,67,0,0" Height="37" Width="37" Foreground="#FF39555D"></materialDesign:PackIcon>
-        <TextBox x:Name="bedragTxtBox" Text="Bedrag" Margin="294,67,354,377" Foreground="#FF39555D" TextChanged="BedragTxtBox_TextChanged"/>
+        <TextBox x:Name="bedragTxtBox" Text="Bedrag" Margin="294,67,354,377" Foreground="#FF39555D"/>
 
         <dragablz:TabablzControl Margin="0,172,0,0" BorderBrush="#FF1DE9B6">
             <dragablz:TabablzControl.InterTabController>
@@ -54,13 +57,17 @@
                 </TabItem.Header>
                 <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <StackPanel x:Name="textPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-                        
+
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
         </dragablz:TabablzControl>
-        <Button x:Name="berekenBtn" Margin="349,182,365,272" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="BerekenBtn_Click"/>
-        <Button x:Name="addText" Margin="349,123,365,331" Height="Auto" Content="AddText" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="AddText_Click"/>
+        <Button x:Name="berekenBtn" Margin="312,178,402,270" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="BerekenBtn_Click"/>
+        <ComboBox x:Name="volgordeBox" materialDesign:HintAssist.Hint="Volgorde" materialDesign:HintAssist.Foreground="#FF39555D" materialDesign:HintAssist.HintOpacity="100" Margin="403,178,297,270" SelectionChanged="VolgordeBox_SelectionChanged">
+            <ComboBoxItem x:Name="hoogNaarLaagItm" Foreground="#FF39555D">Hoog > laag</ComboBoxItem>
+            <ComboBoxItem x:Name="laagNaarHoogItm" Foreground="#FF39555D">Laag > hoog</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="resetBtn" Margin="344,104,370,340" Height="Auto" Content="Reset" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="ResetBtn_Click"/>
     </Grid>
 
 </Window>
