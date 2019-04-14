@@ -109,7 +109,91 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\shibainu.jpg" />
+    <None Include="bin\Debug\MonopolyCards\Amsterdam\Kalverstraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Amsterdam\Leidsestraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Arnhem\Ketelstraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Arnhem\Steenstraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Arnhem\Velperplein.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Den_haag\Lange_poten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Den_haag\Plein.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Den_haag\Spui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Groningen\Akerkhof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Groningen\Grotemarkt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Groningen\Heerestraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Haarlem\Zijlweg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Haarlem\Barteljorisstraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Haarlem\Houtstraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Ons_dorp\Brink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Ons_dorp\Dorpsstraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Overig\Elektriciteitsbedrijf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Overig\Waterleiding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Rotterdam\Blaak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Rotterdam\Coolsingel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Rotterdam\Hofplein.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Stations\Station_noord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Stations\Station_oost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Stations\Station_west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Stations\Station_zuid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Utrecht\Biltstraat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Utrecht\Neude.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Utrecht\Vreeburg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\MonopolyCards\Monopoly.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

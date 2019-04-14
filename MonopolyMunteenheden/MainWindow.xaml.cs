@@ -92,7 +92,7 @@ namespace MonopolyMunteenheden
             {
                 // Voeg alle data toe aan een collection
                 var informatie = from s in data.Streets
-                    // Order het van laag naar hoog
+                    // Sorteer het van laag naar hoog
                     orderby s.Price ascending
                     // Stop het allemaal in een groep
                     group s by s;
