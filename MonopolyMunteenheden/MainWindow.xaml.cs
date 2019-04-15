@@ -38,7 +38,7 @@ namespace MonopolyMunteenheden
         {
             InitializeComponent();
             volgordeBox.SelectedIndex = 0;
-            mainWindow.Icon = new ImageSourceConverter().ConvertFromString(AppDomain.CurrentDomain.BaseDirectory + "/MonopolyCards/Monopoly.png") as ImageSource;
+            mainWindow.Icon = new ImageSourceConverter().ConvertFromString(AppDomain.CurrentDomain.BaseDirectory + "/Monopolycards/Monopoly.png") as ImageSource;
         }
 
         // Functionaliteit voor het verplaatsen van de MainWindow

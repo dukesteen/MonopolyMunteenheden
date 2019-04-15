@@ -62,12 +62,12 @@
                 </ScrollViewer>
             </TabItem>
         </dragablz:TabablzControl>
-        <Button x:Name="berekenBtn" Margin="312,178,402,270" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="BerekenBtn_Click"/>
-        <ComboBox x:Name="volgordeBox" materialDesign:HintAssist.Hint="Volgorde" materialDesign:HintAssist.Foreground="#FF39555D" materialDesign:HintAssist.HintOpacity="100" Margin="403,178,297,270" SelectionChanged="VolgordeBox_SelectionChanged">
+        <Button x:Name="berekenBtn" Margin="339,178,371,270" Height="Auto" Content="Bereken" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="BerekenBtn_Click"/>
+        <ComboBox x:Name="volgordeBox" materialDesign:HintAssist.Hint="Volgorde" materialDesign:HintAssist.Foreground="#FF39555D" materialDesign:HintAssist.HintOpacity="100" Margin="435,178,272,270" SelectionChanged="VolgordeBox_SelectionChanged" HorizontalAlignment="Center" Width="93">
             <ComboBoxItem x:Name="hoogNaarLaagItm" Foreground="#FF39555D">Hoog > laag</ComboBoxItem>
             <ComboBoxItem x:Name="laagNaarHoogItm" Foreground="#FF39555D">Laag > hoog</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="resetBtn" Margin="344,104,370,340" Height="Auto" Content="Reset" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="ResetBtn_Click"/>
+        <Button x:Name="resetBtn" Margin="254,178,466,270" Height="Auto" Content="Reset" Background="{x:Null}" Foreground="#FF39555D" BorderBrush="#FF00B686" Click="ResetBtn_Click"/>
     </Grid>
 
 </Window>
