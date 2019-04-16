@@ -16,6 +16,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/*
+ * Author: Duke Steenbakkers
+ * Datum: 16-4-2019
+*/
+
+/*
+ * BESTANDEN
+ * -
+*/
+
+/*
+ * Declaratie variabelen
+ * bedrag: 0 by default, dit kan verandere door gebruikersinput of door de random knop
+ * hoogNaarLaag: Als deze variabele "true" is sorteert het programma van hoog naar laag
+ * laagNaarHoog: Als deze variabele "true" is sorteert het programma van laag naar hoog
+ * random: Nieuwe random class voor het genereren van random getallen
+ * jsonString: Dit is de string die alle data van straten bevat, inclusief locaties voor de plaatjes
+ * data: Deze variabele bevat alle data van jsonString, maar makkelijk bereikbaar
+*/
 namespace MonopolyMunteenheden
 {
     /// <summary>
@@ -23,10 +42,10 @@ namespace MonopolyMunteenheden
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Definitie variabelen
         public int bedrag = 0;
         public bool hoogNaarLaag = true;
         public bool laagNaarHoog;
-
         public readonly Random random = new Random();
 
         // jsonString draagt alle data voor de straten (Prijs, stadsnaam, straatnaam en foto path)
@@ -34,10 +53,13 @@ namespace MonopolyMunteenheden
         // Hier word de JSON data in de StreetData class gestopt
         private readonly StreetData data = JsonConvert.DeserializeObject<StreetData>(jsonString);
 
+        // INSTRUCTIES
         public MainWindow()
         {
             InitializeComponent();
+            // Geselecteerde volgorde is hoog naar laag
             volgordeBox.SelectedIndex = 0;
+            // Zet het icoontje naar deze path
             mainWindow.Icon = new ImageSourceConverter().ConvertFromString(AppDomain.CurrentDomain.BaseDirectory + "/Monopolycards/Monopoly.png") as ImageSource;
         }
 
