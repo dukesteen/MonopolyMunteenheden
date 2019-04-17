@@ -17,7 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 /*
- * Author: Duke Steenbakkers
+ * Author: [redacted]
  * Datum: 16-4-2019
 */
 
